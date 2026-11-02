@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="logo.png">
+    <title>Admin Dashboard - NPO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <div class="logo">
+            <img src="logo.png" alt="NPO Logo" class="brand-logo">
+            NPO Management
+        </div>
+
+        <div class="nav-links">
+            <a href="admin-dashboard.html">Dashboard</a>
+            <a href="inventory.html">Inventory</a>
+            <a href="donations.html">Donations</a>
+            <a href="leaderboard.html">Leaderboard</a>
+
+            <button onclick="logout()">Logout</button>
+        </div>
+
+    </nav>
+
+
+    <!-- Dashboard -->
+    <section class="dashboard-section">
+
+        <div class="dashboard-container">
+
+            <h1>Admin Dashboard</h1>
+
+            <p class="dashboard-welcome">
+                Welcome, <span id="adminName">Admin</span>
+            </p>
+
+
+            <!-- Statistics -->
+
+            <div class="dashboard-cards">
+
+                <a href="users.html">
+                    <div class="dashboard-card">
+                    <h3>Total Users</h3>
+                    <p id="totalUsers">0</p>
+                </div>
+                </a>
+
+                <a href="helpers.html">
+                    <div class="dashboard-card">
+                        <h3>Total Helpers</h3>
+                        <p id="totalHelpers">0</p>
+                    </div>
+                </a>
+                
+
+                <div class="dashboard-card">
+                    <h3>Beneficiaries</h3>
+                    <p id="totalBeneficiaries">0</p>
+                </div>
+
+                <a href="helper-requests.html">
+                    <div class="dashboard-card">
+                    <h3>Total Requests</h3>
+                    <p id="totalRequests">0</p>
+                </div>
+                </a>
+                
+
+                <div class="dashboard-card">
+                    <h3>Pending Requests</h3>
+                    <p id="pendingRequests">0</p>
+                </div>
+
+                <div class="dashboard-card">
+                    <h3>Completed Helps</h3>
+                    <p id="completedHelps">0</p>
+                </div>
+                <a href="inventory-records.html">
+                    <div class="dashboard-card">
+                    <h3>Inventory Items</h3>
+                    <p id="inventoryItems">0</p>
+                </div>
+                </a>
+                
+
+                <a href="admin-donations.html">
+                    <div class="dashboard-card">
+                        <h3>Total Donations</h3>
+                        <p id="totalDonations">0</p>
+                    </div>
+                </a>
+
+            </div>
+
+
+            <!-- Quick Actions -->
+
+            <h2 class="dashboard-title">
+                Quick Actions
+            </h2>
+
+           <div class="module-grid">
+
+    <!-- Children -->
+    <div class="module-card">
+        <div class="module-icon">
+             <i class="fa-solid fa-child"></i>
+        </div>
+        <h3>Children</h3>
+        <p>Manage children and their records.</p>
+
+        <div class="module-buttons">
+            <a href="child-management.html">Add Child</a>
+            <a href="children-records.html">View Records</a>
+        </div>
+    </div>
+
+
+    <!-- Staff -->
+    <div class="module-card">
+        <div class="module-icon">
+            <i class="fa-solid fa-users"></i>
+        </div>
+        <h3>Staff</h3>
+        <p>Manage NPO staff members.</p>
+
+        <div class="module-buttons">
+            <a href="staff-management.html">Add Staff</a>
+            <a href="staff-records.html">View Records</a>
+        </div>
+    </div>
+
+
+    <!-- Education -->
+    <div class="module-card">
+        <div class="module-icon">
+           <i class="fa-duotone fa-solid fa-graduation-cap"></i>
+        </div>
+        <h3>Education</h3>
+        <p>Manage children's education records.</p>
+
+        <div class="module-buttons">
+            <a href="education-management.html">Add Record</a>
+            <a href="education-records.html">View Records</a>
+        </div>
+    </div>
+
+
+    <!-- Donations -->
+    <div class="module-card">
+        <div class="module-icon">
+            <i class="fa-solid fa-hand-holding-dollar"></i>
+        </div>
+        <h3>Donations</h3>
+        <p>View and manage donor contributions.</p>
+
+        <div class="module-buttons">
+            <a href="admin-donations.html">View Donations</a>
+        </div>
+    </div>
+
+
+    <!-- Inventory -->
+    <div class="module-card">
+        <div class="module-icon">
+            <i class="fa-solid fa-box-open"></i>
+        </div>
+        <h3>Inventory</h3>
+        <p>Manage NPO resources and stock.</p>
+
+        <div class="module-buttons">
+            <a href="inventory.html">Manage Inventory</a>
+            <a href="inventory-records.html">View Inventory</a>
+        </div>
+    </div>
+
+
+    <!-- Impact -->
+    <div class="module-card">
+        <div class="module-icon">
+             <i class="fa-solid fa-trophy"></i>
+        </div>
+        <h3>Impact & Motivation</h3>
+        <p>Track volunteer contributions and rankings.</p>
+
+        <div class="module-buttons">
+            <a href="leaderboard.html">Leaderboard</a>
+            
+        </div>
+    </div>
+
+</div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        <p>© 2026 NPO Management System</p>
+    </footer>
+
+
+    <script src="js/admin.js"></script>
+
+</body>
+</html>

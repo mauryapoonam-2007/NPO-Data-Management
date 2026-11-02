@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon"
+          type="image/png"
+          href="/logo.png">
+
+    <title>Request Help - NPO Management</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            NPO Management
+        </div>
+
+        <div class="nav-links">
+
+            <a href="beneficiary-dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="#" onclick="logout()">
+                Logout
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- HELP REQUEST FORM -->
+
+    <section class="form-section">
+
+        <div class="form-container">
+
+            <h1>
+                Request Help
+            </h1>
+
+            <p class="form-description">
+                Tell us what kind of support you need.
+                Our team will review your request.
+            </p>
+
+
+            <form id="helpRequestForm">
+
+
+                <!-- TITLE -->
+
+                <div class="form-group">
+
+                    <label for="title">
+                        Request Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="title"
+                        placeholder="Example: Education Support"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- DESCRIPTION -->
+
+                <div class="form-group">
+
+                    <label for="description">
+                        What help do you need?
+                    </label>
+
+                    <textarea
+                        id="description"
+                        placeholder="Explain your requirement..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+
+                <!-- CATEGORY -->
+
+                <div class="form-group">
+
+                    <label for="category">
+                        Help Category
+                    </label>
+
+                    <select id="category" required>
+
+                        <option value="">
+                            Select Category
+                        </option>
+
+                        <option value="EDUCATION">
+                            Education
+                        </option>
+
+                        <option value="FOOD">
+                            Food
+                        </option>
+
+                        <option value="MEDICAL">
+                            Medical
+                        </option>
+
+                        <option value="CLOTHING">
+                            Clothing
+                        </option>
+
+                        <option value="FINANCIAL">
+                            Financial
+                        </option>
+
+                        <option value="OTHER">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- CITY -->
+
+                <div class="form-group">
+
+                    <label for="city">
+                        City
+                    </label>
+
+                    <input
+                        type="text"
+                        id="city"
+                        placeholder="Enter your city"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- PRIORITY -->
+
+                <div class="form-group">
+
+                    <label for="priority">
+                        Priority
+                    </label>
+
+                    <select id="priority" required>
+
+                        <option value="">
+                            Select Priority
+                        </option>
+
+                        <option value="LOW">
+                            Low
+                        </option>
+
+                        <option value="MEDIUM">
+                            Medium
+                        </option>
+
+                        <option value="HIGH">
+                            High
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- SUBMIT -->
+
+                <button
+                    type="submit"
+                    class="form-submit-btn">
+
+                    Submit Help Request
+
+                </button>
+
+
+            </form>
+
+
+
+            <!-- MESSAGE -->
+
+            <p
+                id="helpRequestMessage"
+                class="form-message">
+            </p>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 NPO Management System
+        </p>
+
+    </footer>
+
+
+
+    <script src="js/beneficiary.js"></script>
+
+</body>
+
+</html>

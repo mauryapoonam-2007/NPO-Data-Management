@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="logo.png">
+    <title>My Tasks - NPO Management System</title>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                NPO Management
+            </div>
+
+            <div class="nav-links">
+                <a href="helper-dashboard.html">Dashboard</a>
+                <a href="helper-requests.html">My Tasks</a>
+                <a href="history.html">History</a>
+                <a href="leaderboard.html">Leaderboard</a>
+
+                <a href="#" id="logoutBtn" class="login-btn">
+                    Logout
+                </a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- Tasks Section -->
+    <section class="help-section">
+
+        <div class="container">
+
+            <h1>My Assigned Tasks</h1>
+
+            <p class="section-description">
+                View and manage help requests assigned to you.
+            </p>
+
+            <!-- Task Cards -->
+            <div id="tasksContainer" class="help-cards">
+
+                <p id="loadingMessage">
+                    Loading tasks...
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="container">
+
+            <h3>NPO Management System</h3>
+
+            <p>
+                Working together for a better tomorrow.
+            </p>
+
+            <p class="copyright">
+                © 2026 NPO Management System.
+                All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/helper-requests.js"></script>
+
+</body>
+
+</html>

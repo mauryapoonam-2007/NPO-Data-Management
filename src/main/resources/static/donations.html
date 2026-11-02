@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon"
+          type="image/png"
+          href="/logo.png">
+
+    <title>Donate - NPO Management</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ==================== NAVBAR ==================== -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            NPO Management
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="login.html">
+                Login
+            </a>
+
+            <a href="register.html">
+                Register
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ==================== DONATION SECTION ==================== -->
+
+    <section class="form-section">
+
+        <div class="form-container">
+
+
+            <h1>
+                Make a Donation
+            </h1>
+
+
+            <p class="form-description donation-intro">
+
+    <span class="intro-text">
+        Your contribution can make a real difference.
+    </span>
+
+    <span class="account-question">
+        Want to track your contribution and stay connected?
+    </span>
+
+    <span class="account-links">
+        <a href="login.html" class="login-link">
+            Login
+        </a>
+
+        <span class="divider">|</span>
+
+        <a href="register.html" class="register-link">
+            Create Account
+        </a>
+    </span>
+
+    <span class="guest-text">
+        Or continue as a guest and submit your donation.
+    </span>
+
+</p>
+
+<div class="donation-payment">
+    <h2>Support Our NPO</h2>
+
+    <img src="QR.png" alt="Donation QR Code" class="donation-qr">
+
+    <p>Scan the QR code to make a donation</p>
+
+    <div class="bank-details">
+        <p><strong>Bank Name:</strong> State Bank of India</p>
+        <p><strong>Account Name:</strong> Helping Hands Foundation</p>
+        <p><strong>Account Number:</strong> 1234567890</p>
+        <p><strong>IFSC Code:</strong> SBIN0001234</p>
+        <p><strong>UPI ID:</strong> helpinghands@upi</p>
+    </div>
+</div>
+
+
+            <!-- ==================== DONATION FORM ==================== -->
+
+            <form id="donationForm">
+
+
+                <!-- FULL NAME -->
+
+                <div class="form-group">
+
+                    <label for="donorName">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="donorName"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label for="donorEmail">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="donorEmail"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- PHONE -->
+
+                <div class="form-group">
+
+                    <label for="donorPhone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="donorPhone"
+                        placeholder="Enter your phone number"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- DONATION TYPE -->
+
+                <div class="form-group">
+
+                    <label for="type">
+                        Donation Type
+                    </label>
+
+                    <select id="type" required>
+
+                        <option value="MONEY">
+                            Money
+                        </option>
+
+                        <option value="MATERIAL">
+                            Material
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- ==================== MONEY DONATION ==================== -->
+
+                <div
+                    class="form-group"
+                    id="amountGroup"
+                >
+
+                    <label for="amount">
+                        Amount (₹)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="amount"
+                        placeholder="Enter donation amount"
+                        min="1"
+                    >
+
+                </div>
+
+
+
+                <!-- ==================== MATERIAL DONATION ==================== -->
+
+                <div
+                    id="materialFields"
+                    style="display: none;"
+                >
+
+
+                    <!-- ITEM NAME -->
+
+                    <div class="form-group">
+
+                        <label for="itemName">
+                            Item Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="itemName"
+                            placeholder="Example: School Books"
+                        >
+
+                    </div>
+
+
+
+                    <!-- QUANTITY + UNIT -->
+
+                    <div class="form-row">
+
+
+                        <!-- QUANTITY -->
+
+                        <div class="form-group">
+
+                            <label for="quantity">
+                                Quantity
+                            </label>
+
+                            <input
+                                type="number"
+                                id="quantity"
+                                placeholder="Enter quantity"
+                                min="1"
+                            >
+
+                        </div>
+
+
+
+                        <!-- UNIT -->
+
+                        <div class="form-group">
+
+                            <label for="unit">
+                                Unit
+                            </label>
+
+                            <input
+                                type="text"
+                                id="unit"
+                                placeholder="Example: pieces"
+                            >
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- CATEGORY -->
+
+                <div class="form-group">
+
+                    <label for="category">
+                        Category
+                    </label>
+
+                    <input
+                        type="text"
+                        id="category"
+                        placeholder="Example: Education"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- CITY -->
+
+                <div class="form-group">
+
+                    <label for="city">
+                        City
+                    </label>
+
+                    <input
+                        type="text"
+                        id="city"
+                        placeholder="Enter your city"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- DESCRIPTION -->
+
+                <div class="form-group">
+
+                    <label for="description">
+                        Description
+                    </label>
+
+                    <textarea
+                        id="description"
+                        placeholder="Tell us something about your donation..."
+                    ></textarea>
+
+                </div>
+
+
+
+                <!-- SUBMIT BUTTON -->
+
+                <button
+                    type="submit"
+                    class="form-submit-btn"
+                >
+                    Submit Donation
+                </button>
+
+
+            </form>
+
+
+
+            <!-- ==================== MESSAGE ==================== -->
+
+            <p
+                id="donationMessage"
+                class="form-message"
+            ></p>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================== FOOTER ==================== -->
+
+    <footer>
+
+        <p>
+            © 2026 NPO Management System
+        </p>
+
+    </footer>
+
+
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+
+    <script src="js/donation.js"></script>
+
+
+</body>
+
+</html>

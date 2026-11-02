@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+    <link rel="icon"
+          type="image/png"
+          href="logo.png">
+
+    <title>Staff Records - NPO Management System</title>
+
+</head>
+
+<body>
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            NPO Management
+        </div>
+
+        <div class="nav-links">
+
+            <a href="admin-dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="staff-management.html">
+                Add Staff
+            </a>
+
+            <a href="staff-records.html">
+                Staff Records
+            </a>
+
+            <a href="#" id="logoutBtn">
+                Logout
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<section class="dashboard-section">
+
+    <div class="dashboard-container">
+
+        <h1>
+            Staff Records
+        </h1>
+
+        <p class="section-description">
+            View all staff members working with the NPO.
+        </p>
+
+
+        <div class="form-group">
+
+            <label for="searchStaff">
+                Search Staff
+            </label>
+
+            <input
+                type="text"
+                id="searchStaff"
+                placeholder="Search by staff name"
+            >
+
+        </div>
+
+
+        <div id="staffContainer">
+
+            <p>
+                Loading staff records...
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div class="container">
+
+        <h3>
+            NPO Management System
+        </h3>
+
+        <p>
+            Working together for a better tomorrow.
+        </p>
+
+        <p class="copyright">
+            © 2026 NPO Management System.
+            All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="js/staff-records.js"></script>
+
+</body>
+
+</html>

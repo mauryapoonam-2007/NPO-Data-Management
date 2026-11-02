@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+    <link rel="icon"
+          type="image/png"
+          href="logo.png">
+
+    <title>Education Management - NPO Management System</title>
+
+</head>
+
+<body>
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            NPO Management
+        </div>
+
+        <div class="nav-links">
+
+            <a href="admin-dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="education-management.html">
+                Education Management
+            </a>
+
+            <a href="education-records.html">
+                Education Records
+            </a>
+
+            <a href="#" id="logoutBtn">
+                Logout
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<section class="form-section">
+
+    <div class="form-container">
+
+        <h1>Education Management</h1>
+
+        <p class="form-description">
+            Add education details for children.
+        </p>
+
+
+        <form id="educationForm">
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="childId">
+                        Child ID
+                    </label>
+
+                    <input
+                        type="text"
+                        id="childId"
+                        placeholder="Enter child ID"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="childName">
+                        Child Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="childName"
+                        placeholder="Enter child name"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="schoolName">
+                    School / Institution
+                </label>
+
+                <input
+                    type="text"
+                    id="schoolName"
+                    placeholder="Enter school name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="className">
+                        Class / Grade
+                    </label>
+
+                    <input
+                        type="text"
+                        id="className"
+                        placeholder="Example: 8th"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="academicYear">
+                        Academic Year
+                    </label>
+
+                    <input
+                        type="text"
+                        id="academicYear"
+                        placeholder="Example: 2026-27"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="admissionDate">
+                        Admission Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="admissionDate"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="attendancePercentage">
+                        Attendance %
+                    </label>
+
+                    <input
+                        type="number"
+                        id="attendancePercentage"
+                        min="0"
+                        max="100"
+                        step="0.01"
+                        placeholder="Example: 92.5"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="performance">
+                    Performance
+                </label>
+
+                <select id="performance" required>
+
+                    <option value="">
+                        Select Performance
+                    </option>
+
+                    <option value="EXCELLENT">
+                        Excellent
+                    </option>
+
+                    <option value="GOOD">
+                        Good
+                    </option>
+
+                    <option value="AVERAGE">
+                        Average
+                    </option>
+
+                    <option value="NEEDS_IMPROVEMENT">
+                        Needs Improvement
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="remarks">
+                    Remarks
+                </label>
+
+                <textarea
+                    id="remarks"
+                    placeholder="Enter education remarks">
+                </textarea>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="form-submit-btn">
+
+                Add Education Record
+
+            </button>
+
+        </form>
+
+
+        <p
+            id="educationMessage"
+            class="form-message">
+        </p>
+
+
+        <div class="form-link">
+
+            <a href="education-records.html">
+                View All Education Records
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div class="container">
+
+        <h3>
+            NPO Management System
+        </h3>
+
+        <p>
+            Working together for a better tomorrow.
+        </p>
+
+        <p class="copyright">
+            © 2026 NPO Management System.
+            All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="js/education-management.js"></script>
+
+</body>
+
+</html>

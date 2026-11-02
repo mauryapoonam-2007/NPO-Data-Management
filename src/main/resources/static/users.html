@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Registered Users</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 25px;
+            background: #f4f6f9;
+        }
+        h2 { color: #243b53; }
+        .table-container {
+            overflow-x: auto;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+        th { background: #243b53; color: white; }
+        #message { margin: 15px 0; }
+        a { color: #1769aa; }
+        div{
+            background-color: white;
+            height:200;
+            width:100%;
+        }
+        h1{
+            color:green;
+           
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1><img src="logo.png" height="50" width="50"> NPO Management</h1>
+    </div>
+    <a href="admin-dashboard.html">← Back to Dashboard</a>
+    <h2>All Registered Users</h2>
+    <p id="message">Loading users...</p>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>City</th>
+                    <th>Role</th>
+                    <th>Registered On</th>
+                </tr>
+            </thead>
+            <tbody id="usersTable"></tbody>
+        </table>
+    </div>
+
+    <script>
+        const token = localStorage.getItem("token");
+        const role = localStorage.getItem("role");
+
+        async function loadUsers() {
+            const message = document.getElementById("message");
+
+            if (!token || role !== "ADMIN") {
+                message.textContent = "Please login as Admin.";
+                return;
+            }
+
+            try {
+                const response = await fetch("/admin/users", {
+                    headers: {
+                        "Authorization": "Bearer " + token
+                    }
+                });
+
+                if (!response.ok) {
+                    message.textContent =
+                        "Unable to load users. Status: " + response.status;
+                    return;
+                }
+
+                const users = await response.json();
+                const tbody = document.getElementById("usersTable");
+                tbody.replaceChildren();
+
+                if (users.length === 0) {
+                    message.textContent = "No registered users found.";
+                    return;
+                }
+
+                users.forEach(user => {
+                    const tr = document.createElement("tr");
+
+                    [
+                        user.fullName,
+                        user.email,
+                        user.phone,
+                        user.city,
+                        user.role,
+                        user.createdAt
+                            ? new Date(user.createdAt).toLocaleString()
+                            : "-"
+                    ].forEach(value => {
+                        const td = document.createElement("td");
+                        td.textContent = value ?? "-";
+                        tr.appendChild(td);
+                    });
+
+                    tbody.appendChild(tr);
+                });
+
+                message.textContent = "Total users: " + users.length;
+            } catch (error) {
+                console.error(error);
+                message.textContent =
+                    "Could not connect to the server. Check if Spring Boot is running.";
+            }
+        }
+
+        loadUsers();
+    </script>
+</body>
+</html>

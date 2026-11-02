@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Records | NPO Management</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a class="brand" href="dashboard.html">
+            <img src="logo.png" alt="NPO Logo" class="brand-logo">
+            NPO Management
+        </a>
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="inventory.html">Add Inventory</a>
+            <a class="active" href="inventory-records.html">Inventory Records</a>
+            <a href="#" onclick="logout()">Logout</a>
+        </div>
+    </nav>
+
+    <main class="records-container">
+        <header class="records-heading">
+            <h1>Inventory Records</h1>
+            <p>View all donated items and supplies available with the NPO.</p>
+        </header>
+
+        <div class="search-group">
+            <label for="searchInventory">Search Inventory</label>
+            <input
+                type="search"
+                id="searchInventory"
+                placeholder="Search by item name, category or city">
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item Name</th>
+                        <th>Category</th>
+                        <th>Quantity</th>
+                        <th>Unit</th>
+                        <th>City</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody id="inventoryTableBody">
+                    <tr>
+                        <td colspan="6">Loading inventory...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p id="recordsMessage" class="message" role="status"></p>
+
+        <a class="records-link" href="inventory.html">
+            + Add New Inventory
+        </a>
+    </main>
+
+    <script src="js/auth.js"></script>
+    <script src="js/inventory-records.js"></script>
+</body>
+</html>

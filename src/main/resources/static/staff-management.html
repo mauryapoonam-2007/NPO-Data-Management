@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+    <link rel="icon"
+          type="image/png"
+          href="logo.png">
+
+    <title>Staff Management - NPO Management System</title>
+
+</head>
+
+<body>
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            NPO Management
+        </div>
+
+        <div class="nav-links">
+
+            <a href="admin-dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="staff-management.html">
+                Staff Management
+            </a>
+
+            <a href="staff-records.html">
+                Staff Records
+            </a>
+
+            <a href="#" id="logoutBtn">
+                Logout
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<section class="form-section">
+
+    <div class="form-container">
+
+        <h1>Staff Management</h1>
+
+        <p class="form-description">
+            Add staff members who work with the NPO.
+        </p>
+
+
+        <form id="staffForm">
+
+            <div class="form-group">
+
+                <label for="fullName">
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="fullName"
+                    placeholder="Enter staff full name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="Enter phone number"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="designation">
+                        Designation
+                    </label>
+
+                    <input
+                        type="text"
+                        id="designation"
+                        placeholder="Example: Manager"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="department">
+                        Department
+                    </label>
+
+                    <select id="department" required>
+
+                        <option value="">
+                            Select Department
+                        </option>
+
+                        <option value="ADMINISTRATION">
+                            Administration
+                        </option>
+
+                        <option value="EDUCATION">
+                            Education
+                        </option>
+
+                        <option value="HEALTHCARE">
+                            Healthcare
+                        </option>
+
+                        <option value="CHILDCARE">
+                            Child Care
+                        </option>
+
+                        <option value="FINANCE">
+                            Finance
+                        </option>
+
+                        <option value="OPERATIONS">
+                            Operations
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="joiningDate">
+                        Joining Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="joiningDate"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="city">
+                        City
+                    </label>
+
+                    <input
+                        type="text"
+                        id="city"
+                        placeholder="Enter city"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="form-submit-btn">
+
+                Add Staff
+
+            </button>
+
+        </form>
+
+
+        <p
+            id="staffMessage"
+            class="form-message">
+        </p>
+
+
+        <div class="form-link">
+
+            <a href="staff-records.html">
+                View All Staff Records
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div class="container">
+
+        <h3>
+            NPO Management System
+        </h3>
+
+        <p>
+            Working together for a better tomorrow.
+        </p>
+
+        <p class="copyright">
+            © 2026 NPO Management System.
+            All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="js/staff-management.js"></script>
+
+</body>
+
+</html>

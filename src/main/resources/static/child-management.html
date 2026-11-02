@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <title>Child Management - NPO Management System</title>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                NPO Management
+            </div>
+
+            <div class="nav-links">
+                <a href="admin-dashboard.html">Dashboard</a>
+                <a href="child-management.html">Children</a>
+                <a href="admin-donations.html">Donations</a>
+                <a href="inventory.html">Inventory</a>
+                <a href="#" id="logoutBtn">Logout</a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- Child Form -->
+    <section class="form-section">
+
+        <div class="form-container">
+
+            <h1>Child Management</h1>
+
+            <p class="form-description">
+                Add and manage children registered with the orphanage.
+            </p>
+
+
+            <form id="childForm">
+
+                <!-- Child Name -->
+                <div class="form-group">
+
+                    <label for="childName">
+                        Child Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="childName"
+                        placeholder="Enter child name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- DOB + Gender -->
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="dateOfBirth">
+                            Date of Birth
+                        </label>
+
+                        <input
+                            type="date"
+                            id="dateOfBirth"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="gender">
+                            Gender
+                        </label>
+
+                        <select id="gender" required>
+
+                            <option value="">
+                                Select Gender
+                            </option>
+
+                            <option value="MALE">
+                                Male
+                            </option>
+
+                            <option value="FEMALE">
+                                Female
+                            </option>
+
+                            <option value="OTHER">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Admission Date -->
+                <div class="form-group">
+
+                    <label for="admissionDate">
+                        Admission Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="admissionDate"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Education -->
+                <div class="form-group">
+
+                    <label for="educationStatus">
+                        Education Status
+                    </label>
+
+                    <select id="educationStatus">
+
+                        <option value="NOT_ENROLLED">
+                            Not Enrolled
+                        </option>
+
+                        <option value="SCHOOL">
+                            School
+                        </option>
+
+                        <option value="COLLEGE">
+                            College
+                        </option>
+
+                        <option value="VOCATIONAL">
+                            Vocational Training
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Health -->
+                <div class="form-group">
+
+                    <label for="healthStatus">
+                        General Health Status
+                    </label>
+
+                    <select id="healthStatus">
+
+                        <option value="GOOD">
+                            Good
+                        </option>
+
+                        <option value="UNDER_TREATMENT">
+                            Under Treatment
+                        </option>
+
+                        <option value="NEEDS_ATTENTION">
+                            Needs Attention
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- City -->
+                <div class="form-group">
+
+                    <label for="city">
+                        City
+                    </label>
+
+                    <input
+                        type="text"
+                        id="city"
+                        placeholder="Enter city"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Submit -->
+                <button
+                    type="submit"
+                    class="form-submit-btn"
+                >
+                    Add Child
+                </button>
+
+            </form>
+
+
+            <!-- Message -->
+            <p
+                id="childMessage"
+                class="form-message"
+            ></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Children Records -->
+    <div class="form-link">
+    <a href="children-records.html">
+        View All Children Records
+    </a>
+</div>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="container">
+
+            <h3>NPO Management System</h3>
+
+            <p>
+                Working together for a better tomorrow.
+            </p>
+
+            <p class="copyright">
+                © 2026 NPO Management System.
+                All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/child-management.js"></script>
+
+</body>
+
+</html>

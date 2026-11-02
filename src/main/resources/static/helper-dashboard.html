@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Helper Dashboard - NPO Management System</title>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                NPO Management
+            </div>
+
+            <div class="nav-links">
+                <a href="helper-dashboard.html">Dashboard</a>
+                <a href="helper-requests.html">My Tasks</a>
+                <a href="history.html">History</a>
+                <a href="leaderboard.html">Leaderboard</a>
+
+                <a href="#" id="logoutBtn" class="login-btn">
+                    Logout
+                </a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- Dashboard -->
+    <section class="about-section">
+
+        <div class="container">
+
+            <h1>Helper Dashboard</h1>
+
+            <p>
+                Welcome, <strong id="helperName">Helper</strong>!
+            </p>
+
+            <div class="impact-cards">
+
+                <div class="impact-card">
+                    <h3 id="points">0</h3>
+                    <p>Impact Points</p>
+                </div>
+
+                <div class="impact-card">
+                    <h3 id="completedHelps">0</h3>
+                    <p>Completed Helps</p>
+                </div>
+
+                <div class="impact-card">
+                    <h3 id="level">BEGINNER</h3>
+                    <p>Current Level</p>
+                </div>
+
+                <div class="impact-card">
+                    <h3 id="badge">NEW HELPER</h3>
+                    <p>Badge</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Quick Actions -->
+    <section class="help-section">
+
+        <div class="container">
+
+            <h2>Quick Actions</h2>
+
+            <div class="help-cards">
+
+                <div class="help-card">
+                    <h3>My Tasks</h3>
+                    <p>
+                        View help requests assigned to you.
+                    </p>
+
+                    <a href="helper-requests.html"
+                       class="btn primary-btn">
+                        View Tasks
+                    </a>
+                </div>
+
+
+                <div class="help-card">
+                    <h3>Help History</h3>
+                    <p>
+                        View the help activities you have completed.
+                    </p>
+
+                    <a href="history.html"
+                       class="btn primary-btn">
+                        View History
+                    </a>
+                </div>
+
+
+                <div class="help-card">
+                    <h3>Leaderboard</h3>
+                    <p>
+                        See your position among other helpers.
+                    </p>
+
+                    <a href="leaderboard.html"
+                       class="btn primary-btn">
+                        View Leaderboard
+                    </a>
+                </div>
+
+                
+                <div class="help-card">
+                    <h3>Donate</h3>
+                    <p>Support people in need by making a donation.</p>
+                    <a href="donations.html" class="btn primary-btn">
+                        Donate Now
+                    </a>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="container">
+
+            <h3>NPO Management System</h3>
+
+            <p>
+                Working together for a better tomorrow.
+            </p>
+
+            <p class="copyright">
+                © 2026 NPO Management System.
+                All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/helper.js"></script>
+
+</body>
+
+</html>

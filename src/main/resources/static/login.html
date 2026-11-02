@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon"
+          type="image/png"
+          href="/logo.png">
+
+    <title>Login - NPO Management</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            NPO Management
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="donations.html">
+                Donate
+            </a>
+
+            <a href="register.html">
+                Register
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- LOGIN -->
+
+    <section class="login-section">
+
+        <div class="login-container">
+
+
+            <h1>
+                Welcome Back
+            </h1>
+
+
+            <p class="login-description">
+                Login to your NPO account
+            </p>
+
+
+
+            <form id="loginForm">
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter your password"
+                        required
+                    >
+
+                </div>
+
+
+
+                <button
+                    type="submit"
+                    class="login-submit-btn"
+                >
+                    Login
+                </button>
+
+
+            </form>
+
+
+
+            <p
+                id="loginMessage"
+                class="form-message"
+            ></p>
+
+
+
+            <div class="form-link">
+
+                Don't have an account?
+
+                <a href="register.html">
+                    Create Account
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <footer>
+
+        <p>
+            © 2026 NPO Management System
+        </p>
+
+    </footer>
+
+
+
+    <script src="js/auth.js"></script>
+
+</body>
+
+</html>

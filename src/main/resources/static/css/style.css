@@ -1,0 +1,1729 @@
+/* ==============================
+   RESET
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #222;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* ==============================
+   NAVBAR
+================================= */
+
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.navbar {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+    min-height: 70px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #166534;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    font-size: 15px;
+    color: #333;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #166534;
+}
+
+.login-btn {
+    background-color: #166534;
+    color: white !important;
+    padding: 9px 18px;
+    border-radius: 6px;
+}
+
+.login-btn:hover {
+    background-color: #14532d;
+}
+
+
+/* ==============================
+   HERO SECTION
+================================= */
+
+.hero {
+    min-height: 560px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    background: linear-gradient(
+        135deg,
+        #ecfdf5,
+        #f0fdf4
+    );
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: #17202a;
+}
+
+.hero h1 span {
+    color: #166534;
+    display: block;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #555;
+    max-width: 680px;
+    margin: 0 auto 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+
+/* ==============================
+   BUTTONS
+================================= */
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 7px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background-color: #166534;
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: #14532d;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background-color: white;
+    color: #166534;
+    border: 2px solid #166534;
+}
+
+.secondary-btn:hover {
+    background-color: #166534;
+    color: white;
+}
+
+
+/* ==============================
+   ABOUT SECTION
+================================= */
+
+.about-section {
+    padding: 80px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.about-section h2,
+.impact-section h2,
+.help-section h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+    color: #17202a;
+}
+
+.about-section p {
+    max-width: 850px;
+    margin: 0 auto 15px;
+    color: #555;
+    font-size: 17px;
+}
+
+
+/* ==============================
+   IMPACT SECTION
+================================= */
+
+.impact-section {
+    padding: 80px 20px;
+    background-color: #f5f7fa;
+    text-align: center;
+}
+
+.section-description {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.impact-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.impact-card {
+    background-color: white;
+    padding: 35px 20px;
+    border-radius: 10px;
+
+    border: 1px solid #e5e7eb;
+
+    transition: 0.3s;
+}
+
+.impact-card:hover {
+    transform: translateY(-5px);
+}
+
+.impact-card h3 {
+    font-size: 36px;
+    color: #166534;
+    margin-bottom: 8px;
+}
+
+.impact-card p {
+    color: #555;
+}
+
+
+/* ==============================
+   HELP SECTION
+================================= */
+
+.help-section {
+    padding: 80px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.help-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.help-card {
+    padding: 30px 22px;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+
+    background-color: #ffffff;
+
+    transition: 0.3s;
+}
+
+.help-card:hover {
+    transform: translateY(-5px);
+}
+
+.help-card h3 {
+    color: #166534;
+    margin-bottom: 12px;
+    font-size: 21px;
+}
+
+.help-card p {
+    color: #666;
+    font-size: 15px;
+}
+
+
+/* ==============================
+   CTA SECTION
+================================= */
+
+.cta-section {
+    padding: 80px 20px;
+    text-align: center;
+
+    background-color: #166534;
+    color: white;
+}
+
+.cta-section h2 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.cta-section p {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    font-size: 17px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.cta-section .primary-btn {
+    background-color: white;
+    color: #166534;
+}
+
+.cta-section .primary-btn:hover {
+    background-color: #f0fdf4;
+}
+
+.cta-section .secondary-btn {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+}
+
+.cta-section .secondary-btn:hover {
+    background-color: white;
+    color: #166534;
+}
+
+
+/* ==============================
+   FOOTER
+================================= */
+
+footer {
+    background-color: #111827;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+footer h3 {
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #cbd5e1;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+
+/* ==============================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .impact-cards,
+    .help-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 500px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-buttons,
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 200px;
+    }
+
+    .impact-cards,
+    .help-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .about-section h2,
+    .impact-section h2,
+    .help-section h2,
+    .cta-section h2 {
+        font-size: 28px;
+    }
+}
+/* ================================
+   ADMIN DASHBOARD
+================================ */
+
+.dashboard-section {
+    min-height: calc(100vh - 140px);
+    padding: 45px 6%;
+    background: #f5f7fb;
+}
+
+.dashboard-container {
+    max-width: 1250px;
+    margin: auto;
+}
+
+.dashboard-container h1 {
+    font-size: 34px;
+    margin-bottom: 8px;
+    color: #1f2937;
+}
+
+.dashboard-welcome {
+    color: #6b7280;
+    font-size: 16px;
+    margin-bottom: 35px;
+}
+
+.dashboard-welcome span {
+    font-weight: 600;
+    color: #2563eb;
+}
+
+
+/* Statistics Cards */
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    margin-bottom: 45px;
+}
+
+.dashboard-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+    transition: 0.25s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.dashboard-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background: #2563eb;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
+}
+
+.dashboard-card h3 {
+    margin: 0 0 12px;
+    color: #6b7280;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.dashboard-card p {
+    margin: 0;
+    color: #111827;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+
+/* Section Title */
+
+.dashboard-title {
+    color: #1f2937;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+
+/* Navbar Button */
+
+.nav-links button {
+    border: none;
+    background: #ef4444;
+    color: white;
+    padding: 9px 17px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.nav-links button:hover {
+    background: #dc2626;
+}
+
+
+/* Footer */
+
+footer {
+    background: #111827;
+    color: #d1d5db;
+    text-align: center;
+    padding: 22px;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1000px) {
+
+    .dashboard-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    
+}
+
+
+@media (max-width: 600px) {
+
+    .dashboard-section {
+        padding: 30px 20px;
+    }
+
+    .dashboard-container h1 {
+        font-size: 28px;
+    }
+
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+
+    
+}
+/* =========================================
+   COMMON FORM DESIGN
+========================================= */
+
+.form-section {
+    min-height: calc(100vh - 140px);
+    background: #f5f7fb;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 650px;
+    background: #ffffff;
+    padding: 35px 40px;
+    border-radius: 18px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.form-container h1 {
+    text-align: center;
+    margin: 0 0 8px;
+    font-size: 30px;
+    color: #1f2937;
+}
+
+.form-container .form-description {
+    text-align: center;
+    color: #6b7280;
+    margin-bottom: 30px;
+}
+
+
+/* Form Group */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #374151;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 9px;
+    background: #ffffff;
+    color: #111827;
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+.form-group input {
+    height: 46px;
+}
+
+.form-group textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.form-group select {
+    height: 46px;
+    cursor: pointer;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+
+/* Placeholder */
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9ca3af;
+}
+
+
+/* Submit Button */
+
+.form-submit-btn {
+    width: 100%;
+    height: 48px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 9px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.form-submit-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+
+/* Form Message */
+
+.form-message {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/* Two fields in one row */
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+
+/* Login/Register links */
+
+.form-link {
+    text-align: center;
+    margin-top: 22px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.form-link a {
+    color: #2563eb;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.form-link a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   LOGIN / REGISTER
+========================================= */
+
+.login-section {
+    min-height: calc(100vh - 140px);
+    background: #f5f7fb;
+    padding: 55px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 460px;
+    background: #ffffff;
+    padding: 38px 40px;
+    border-radius: 18px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.login-container h1 {
+    text-align: center;
+    color: #1f2937;
+    margin: 0 0 8px;
+    font-size: 30px;
+}
+
+.login-container .login-description {
+    text-align: center;
+    color: #6b7280;
+    margin-bottom: 30px;
+}
+
+.login-submit-btn {
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-radius: 9px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.login-submit-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* =========================================
+   RESPONSIVE FORMS
+========================================= */
+
+@media (max-width: 600px) {
+
+    .form-section,
+    .login-section {
+        padding: 30px 15px;
+    }
+
+    .form-container,
+    .login-container {
+        padding: 28px 22px;
+        border-radius: 14px;
+    }
+
+    .form-container h1,
+    .login-container h1 {
+        font-size: 26px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
+/* ==================== DONATION FORM IMPROVEMENT ==================== */
+
+.form-container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 35px 40px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.form-container h1 {
+    text-align: center;
+    margin-bottom: 12px;
+    font-size: 32px;
+}
+
+.form-description {
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.form-description a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#donationForm {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid #d5d5d5;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #555;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+#materialFields {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-submit-btn {
+    width: 100%;
+    padding: 13px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.form-submit-btn:hover {
+    transform: translateY(-1px);
+}
+
+.form-message {
+    text-align: center;
+    margin-top: 18px;
+    font-weight: 600;
+}
+
+
+/* ==================== ACCOUNT LINKS ==================== */
+
+.form-description a {
+    display: inline-block;
+    margin-top: 4px;
+}
+
+
+/* ==================== MOBILE ==================== */
+
+@media (max-width: 600px) {
+
+    .form-container {
+        margin: 20px 15px;
+        padding: 25px 20px;
+    }
+
+    .form-container h1 {
+        font-size: 26px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+}
+/* ==================== DONATION INTRO ==================== */
+
+.donation-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+    background: #f8fafc;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+.intro-text {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.account-question {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.account-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.account-links a {
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.login-link {
+    background: #2563eb;
+    color: white !important;
+    border: 1px solid #2563eb;
+}
+
+.register-link {
+    background: #16a34a;
+    color: white !important;
+    border: 1px solid #16a34a;
+}
+
+.login-link:hover {
+    background: #1d4ed8;
+    border-color: #1d4ed8;
+}
+
+.register-link:hover {
+    background: #15803d;
+    border-color: #15803d;
+}
+
+.divider {
+    font-weight: 500;
+    color: #999;
+}
+
+.guest-text {
+    font-size: 13px;
+    color: #777;
+    margin-top: 3px;
+}
+/* ==================== ADMIN DONATIONS ==================== */
+
+.donation-filter {
+    display: flex;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.donation-filter select {
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+.donation-filter button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#donationList {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.donation-admin-card {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+}
+
+.donation-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.donation-card-header h3 {
+    margin: 0;
+}
+
+.donation-status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.donation-admin-card p {
+    margin: 8px 0;
+}
+
+.donation-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.donation-actions button {
+    padding: 9px 18px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+
+    .donation-filter {
+        flex-direction: column;
+    }
+
+    .donation-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+}
+.donation-payment {
+    text-align: center;
+    padding: 25px;
+    margin-bottom: 30px;
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+}
+
+.donation-payment h2 {
+    margin-bottom: 15px;
+}
+
+.donation-qr {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    margin: 10px auto 15px;
+    display: block;
+}
+
+.bank-details {
+    max-width: 500px;
+    margin: 20px auto 0;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.bank-details p {
+    margin: 8px 0;
+}
+/* ================================
+   LEADERBOARD
+================================ */
+
+.leaderboard-section {
+    padding: 50px 20px;
+}
+
+.leaderboard-section h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.leaderboard-section .section-description {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+/* TOP 3 */
+
+.top-three-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto 45px;
+}
+
+.top-helper-card {
+    text-align: center;
+    padding: 30px 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.top-helper-card .rank {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.top-helper-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.top-helper-card .points {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.top-helper-card .badge {
+    font-size: 14px;
+}
+
+/* OTHER HELPERS */
+
+.other-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.other-helpers-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.helper-ranking-row {
+    display: grid;
+    grid-template-columns: 60px 1fr 130px 150px;
+    align-items: center;
+    gap: 15px;
+    padding: 16px 20px;
+    margin-bottom: 10px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.helper-rank {
+    font-weight: 700;
+}
+
+.helper-name {
+    font-weight: 600;
+}
+
+.helper-points {
+    font-weight: 600;
+}
+
+.helper-badge {
+    text-align: right;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .top-three-container {
+        grid-template-columns: 1fr;
+    }
+
+    .helper-ranking-row {
+        grid-template-columns: 40px 1fr;
+    }
+
+    .helper-points,
+    .helper-badge {
+        text-align: left;
+    }
+}
+.records-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    background: #ffffff;
+}
+
+.records-table th,
+.records-table td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+    font-size: 14px;
+}
+
+.records-table th {
+    font-weight: 600;
+    background: #f8fafc;
+}
+
+.records-table tr:hover {
+    background: #f9fafb;
+}
+
+#childrenContainer {
+    width: 100%;
+    overflow-x: auto;
+}
+
+@media (max-width: 900px) {
+
+    .records-table {
+        min-width: 900px;
+    }
+}
+.records-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    background: #ffffff;
+}
+
+.records-table th,
+.records-table td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+    font-size: 14px;
+}
+
+.records-table th {
+    font-weight: 600;
+    background: #f8fafc;
+}
+
+.records-table tr:hover {
+    background: #f9fafb;
+}
+
+#staffContainer {
+    width: 100%;
+    overflow-x: auto;
+}
+
+@media (max-width: 900px) {
+
+    .records-table {
+        min-width: 1000px;
+    }
+
+}
+.quick-actions-section {
+    padding: 50px 20px;
+}
+
+.quick-actions-section h2 {
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 30px;
+}
+
+.module-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.module-card {
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 16px;
+
+    box-shadow:
+        0 6px 20px
+        rgba(0, 0, 0, 0.08);
+
+    transition: 0.25s;
+}
+
+.module-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 28px
+        rgba(0, 0, 0, 0.12);
+}
+
+.module-icon {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.module-card h3 {
+    margin: 0 0 8px;
+    font-size: 21px;
+}
+
+.module-card p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.module-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.module-buttons a {
+    display: inline-block;
+    padding: 9px 14px;
+
+    border-radius: 7px;
+
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+
+    background: #f1f5f9;
+}
+
+.module-buttons a:hover {
+    background: #e2e8f0;
+}
+
+
+@media (max-width: 900px) {
+
+    .module-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .module-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+.module-icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.module-icon i {
+    display: inline-block;
+}
+
+/* ===================== INVENTORY ========================*/
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f6fb;
+    color: #243247;
+    font-size: 16px;
+}
+
+.navbar {
+    min-height: 82px;
+    padding: 18px 5%;
+    background: #ffffff;
+    border-bottom: 1px solid #e1e6ed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.brand {
+    color: #176b45;
+    font-size: 28px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: #243247;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #2563eb;
+}
+
+.form-card {
+    width: min(880px, calc(100% - 32px));
+    margin: 35px auto;
+    padding: 42px 48px;
+    background: #ffffff;
+    border: 1px solid #e0e5ec;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(20, 35, 55, 0.05);
+}
+
+.page-heading,
+.records-heading {
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+.page-heading h1,
+.records-heading h1 {
+    margin: 0 0 14px;
+    color: #172b4d;
+    font-size: 38px;
+}
+
+.page-heading p,
+.records-heading p {
+    margin: 0;
+    color: #718096;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 27px 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-group label,
+.search-group label {
+    font-weight: 600;
+    color: #34445c;
+}
+
+.form-group input,
+.form-group select,
+.search-group input {
+    width: 100%;
+    min-height: 58px;
+    padding: 14px 17px;
+    border: 1px solid #d3d9e2;
+    border-radius: 11px;
+    background: #ffffff;
+    color: #172b4d;
+    font-family: inherit;
+    font-size: 16px;
+    outline: none;
+}
+
+.form-group input::placeholder,
+.search-group input::placeholder {
+    color: #98a2b3;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.search-group input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.primary-button {
+    width: 100%;
+    min-height: 60px;
+    margin-top: 32px;
+    border: none;
+    border-radius: 11px;
+    background: #2862ed;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.primary-button:hover {
+    background: #1d4ed8;
+}
+
+.primary-button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.records-link {
+    display: block;
+    width: fit-content;
+    margin: 27px auto 0;
+    color: #2563eb;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.records-link:hover {
+    text-decoration: underline;
+}
+
+.message {
+    min-height: 22px;
+    margin: 15px 0 0;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.records-container {
+    width: min(1500px, calc(100% - 48px));
+    margin: 55px auto;
+}
+
+.records-heading {
+    text-align: left;
+    margin-bottom: 42px;
+}
+
+.records-heading h1 {
+    font-size: 40px;
+}
+
+.search-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 48px;
+}
+
+.search-group input {
+    min-height: 56px;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    background: #ffffff;
+}
+
+table {
+    width: 100%;
+    min-width: 780px;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #f8fafc;
+}
+
+th,
+td {
+    padding: 17px 14px;
+    text-align: left;
+    border-bottom: 1px solid #e1e6ed;
+    vertical-align: top;
+}
+
+th {
+    color: #243247;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+td {
+    color: #26364a;
+    overflow-wrap: anywhere;
+}
+
+tbody tr:hover {
+    background: #f8fafc;
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .brand {
+        font-size: 24px;
+    }
+
+    .nav-links {
+        gap: 16px;
+    }
+
+    .form-card {
+        padding: 30px 22px;
+    }
+
+    .page-heading h1,
+    .records-heading h1 {
+        font-size: 30px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .records-container {
+        width: calc(100% - 28px);
+        margin: 30px auto;
+    }
+
+    .records-heading p,
+    .page-heading p {
+        font-size: 16px;
+    }
+
+    .search-group {
+        margin-bottom: 28px;
+    }
+}
+/* logo */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #176b45;
+    font-size: 28px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.brand-logo {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}

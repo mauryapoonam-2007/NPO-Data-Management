@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon"
+          type="image/png"
+          href="/logo.png">
+
+    <title>Beneficiary Dashboard - NPO Management</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            NPO Management
+        </div>
+
+        <div class="nav-links">
+
+            <a href="beneficiary-dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="help-request.html">
+                Request Help
+            </a>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="login.html" onclick="logout()">
+                Logout
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <section class="dashboard-section">
+        
+
+        <div class="dashboard-container">
+
+            <h1>
+                Welcome, <span id="beneficiaryName">Beneficiary</span>
+            </h1>
+
+            <p>
+                Request support and track your help requests.
+            </p>
+
+
+            <div class="dashboard-cards">
+
+                <div class="dashboard-card">
+
+                    <h3>
+                        My Requests
+                    </h3>
+
+                    <p id="totalRequests">
+                        0
+                    </p>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <h3>
+                        Pending
+                    </h3>
+
+                    <p id="pendingRequests">
+                        0
+                    </p>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <h3>
+                        Approved
+                    </h3>
+
+                    <p id="approvedRequests">
+                        0
+                    </p>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <h3>
+                        Completed
+                    </h3>
+
+                    <p id="completedRequests">
+                        0
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-actions">
+
+                <a href="beneficiary-help-requests.html" class="action-card">
+    <h3>Request Help</h3>
+    <p>Submit a new request for assistance.</p>
+</a>
+
+                <a href="helper-requests.html"
+                   class="action-card">
+
+                    <h3>
+                        Request Help
+                    </h3>
+
+                    <p>
+                        Create a new help request.
+                    </p>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            © 2026 NPO Management System
+        </p>
+
+    </footer>
+
+
+    <script src="js/beneficiary.js"></script>
+
+</body>
+
+</html>

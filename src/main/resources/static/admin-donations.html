@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon"
+          type="image/png"
+          href="/logo.png">
+
+    <title>Donations - NPO Management</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            NPO Management
+        </div>
+
+        <div class="nav-links">
+
+            <a href="admin-dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="inventory.html">
+                Inventory
+            </a>
+
+            <a href="admin-donations.html">
+                Donations
+            </a>
+
+            <a href="login.html" onclick="logout()">
+                Logout
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- DONATIONS -->
+
+    <section class="dashboard-section">
+
+        <div class="dashboard-container">
+
+            <h1>
+                Donation Management
+            </h1>
+
+            <p>
+                View, verify and manage donations received by the NPO.
+            </p>
+
+
+            <!-- FILTER -->
+
+            <div class="donation-filter">
+
+    <label for="statusFilter">
+        Filter Donations
+    </label>
+
+    <select id="statusFilter">
+
+        <option value="">
+            All Donations
+        </option>
+
+        <option value="PENDING">
+            Pending
+        </option>
+
+        <option value="RECEIVED">
+            Received
+        </option>
+
+        <option value="REJECTED">
+            Rejected
+        </option>
+
+    </select>
+
+</div>
+
+           
+
+
+            <!-- MESSAGE -->
+
+            <p id="donationMessage"></p>
+
+
+            <!-- DONATION LIST -->
+
+            <div id="donationList">
+
+                <p>
+                    Loading donations...
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            © 2026 NPO Management System
+        </p>
+
+    </footer>
+
+
+    <script src="js/admin-donations.js"></script>
+
+</body>
+
+</html>

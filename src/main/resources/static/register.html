@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon"
+          type="image/png"
+          href="/logo.png">
+
+    <title>Create Account - NPO Management</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            NPO Management
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="donations.html">
+                Donate
+            </a>
+
+            <a href="login.html">
+                Login
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- REGISTER -->
+
+    <section class="form-section">
+
+        <div class="form-container">
+
+
+            <h1>
+                Create Account
+            </h1>
+
+
+            <p class="form-description">
+                Register as a helper and start making an impact.
+            </p>
+
+
+
+            <form id="registerForm">
+
+
+                <!-- FULL NAME -->
+
+                <div class="form-group">
+
+                    <label for="fullName">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="fullName"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your Gmail address"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- PHONE -->
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="Enter your phone number"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- CITY -->
+
+                <div class="form-group">
+
+                    <label for="city">
+                        City
+                    </label>
+
+                    <input
+                        type="text"
+                        id="city"
+                        placeholder="Enter your city"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- PASSWORD -->
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Create a password"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- BUTTON -->
+
+                <button
+                    type="submit"
+                    class="form-submit-btn"
+                >
+                    Create Account
+                </button>
+
+
+            </form>
+
+
+
+            <p
+                id="registerMessage"
+                class="form-message"
+            ></p>
+
+
+
+            <div class="form-link">
+
+                Already have an account?
+
+                <a href="login.html">
+                    Login here
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <footer>
+
+        <p>
+            © 2026 NPO Management System
+        </p>
+
+    </footer>
+
+
+
+    <script src="js/auth.js"></script>
+
+</body>
+
+</html>

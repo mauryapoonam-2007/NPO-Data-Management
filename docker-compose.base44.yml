@@ -1,0 +1,49 @@
+# Base44 sandbox/dev environment for the NPO Data Management app.
+# Runs Spring Boot straight from the cloned source (mvn spring-boot:run) against a
+# local MongoDB, so edits in the repo are picked up by the running app.
+services:
+
+  mongo:
+    image: mongo:7
+    restart: on-failure
+    environment:
+      - MONGO_INITDB_DATABASE=npo
+    volumes:
+      - mongo-data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping').ok"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+
+  web:
+    image: maven:3.9-eclipse-temurin-21
+    restart: on-failure
+    working_dir: /app
+    command: ["sh", "-ec", "exec mvn -B -DskipTests spring-boot:run"]
+    ports:
+      - "3000:8080"
+    environment:
+      # Local infra (not a user secret): the compose-managed MongoDB instance.
+      - SPRING_MONGODB_URI=mongodb://mongo:27017/npo
+      - SPRING_DATA_MONGODB_URI=mongodb://mongo:27017/npo
+      # Serve the HTML/CSS/JS from the bind-mounted source tree so frontend edits
+      # show up without a recompile or restart.
+      - SPRING_WEB_RESOURCES_STATIC_LOCATIONS=file:/app/src/main/resources/static/,classpath:/static/
+    volumes:
+      - ./:/app
+      - maven-repo:/root/.m2
+    depends_on:
+      mongo:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "-o", "/dev/null", "http://127.0.0.1:8080/index.html"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 300s
+
+volumes:
+  mongo-data:
+  maven-repo:

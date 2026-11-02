@@ -1,0 +1,47 @@
+services:
+  mongo:
+    image: mongo:7
+    restart: on-failure
+    command: ["mongod", "--bind_ip_all"]
+    volumes:
+      - mongo-data:/data/db
+    healthcheck:
+      test: ["CMD-SHELL", "mongosh --quiet --eval \"db.adminCommand('ping').ok\" || exit 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 10s
+
+  app:
+    image: maven:3.9-eclipse-temurin-21
+    restart: on-failure
+    working_dir: /app
+    volumes:
+      - .:/app
+      - m2:/root/.m2
+    ports:
+      - "3000:8080"
+    environment:
+      - SPRING_MONGODB_URI=mongodb://mongo:27017/npo
+      - SPRING_DATA_MONGODB_URI=mongodb://mongo:27017/npo
+      # Serve static pages straight from the bind-mounted source so HTML/CSS/JS
+      # edits show up without a rebuild/restart.
+      - SPRING_WEB_RESOURCES_STATICLOCATIONS=file:/app/src/main/resources/static/
+      - BASE44_PREVIEW_MODE
+    depends_on:
+      mongo:
+        condition: service_healthy
+    command:
+      - sh
+      - -ec
+      - exec mvn -q -DskipTests spring-boot:run
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS -o /dev/null http://localhost:8080/index.html || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      start_period: 120s
+
+volumes:
+  mongo-data:
+  m2:
